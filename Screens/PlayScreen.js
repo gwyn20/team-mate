@@ -6,6 +6,7 @@ import ResponsiveImage from 'react-native-responsive-image';
 import { TabNavigator } from 'react-navigation'
 import { StackNavigator } from 'react-navigation';
 import ProfileScreen from './ProfileScreen'
+import EventBadmintonScreen from './EventBadmintonScreen'
 
 // Styles
 import styles from '../Screens/Styles/ProfileScreenStyles'
@@ -18,7 +19,7 @@ export default class PlayScreenContent extends Component {
             <ScrollView style={styles.container}>
                 <KeyboardAvoidingView behavior='position'>
                     <View style={styles.eventIcon}>
-                        <TouchableHighlight onPress={() => { console.log('EventsBadmintonScreen'); }}>
+                        <TouchableHighlight onPress={() => { console.log(this.props.navigation); }}>
                             <ResponsiveImage source={require('../Images/EventIcons/badmintonIcon.png')} initWidth="138" initHeight="138"/>
                         </TouchableHighlight>
                         <TouchableHighlight onPress={() => { console.log('EventsBaseballScreen'); }}>

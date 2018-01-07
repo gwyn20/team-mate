@@ -9,6 +9,7 @@ import LoginScreen from './Screens/LoginScreen'
 import ProfileScreen from './Screens/ProfileScreen'
 import PlayScreen from './Screens/PlayScreen'
 import SettingsScreen from './Screens/SettingsScreen'
+import EventBadmintonScreen from './Screens/EventBadmintonScreen'
 
 export default class App extends React.Component {
   render() {
@@ -32,6 +33,7 @@ const AppDrawerNavigator = DrawerNavigator({
   Profile: { screen: ProfileScreen },
   Play: { screen: PlayScreen },
   Settings: { screen: SettingsScreen },
+  EventBadmintonScreen: { screen: EventBadmintonScreen },
 })
 
 const styles = StyleSheet.create({

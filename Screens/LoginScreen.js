@@ -28,6 +28,11 @@ class LoginScreen extends Component {
     signUpUser = (email, password) => {
 
         try {
+            if(this.state.email = null) { 
+                alert("Please enter a valid Email Address")
+                return;
+            }
+
             if(this.state.password.length < 6) { 
                 alert("Password must be a minimum of 6 characters")
                 return;
@@ -38,20 +43,29 @@ class LoginScreen extends Component {
             })
         }
         catch(error){
-            console.log(error.toString())
+            alert("Sign Up Error, Please add a valid Email and Password")
         }
     }
 
     loginUser = (email, password) => {
         
         try {
+            if(this.state.email = null) { 
+                alert("Please enter a valid Email Address")
+                return;
+            }
+
+            if(this.state.password.length < 6) { 
+                alert("Password must be a minimum of 6 characters")
+                return;
+            }
 
             firebaseApp.auth().signInWithEmailAndPassword(email, password).then(() => {
                 this.props.navigation.navigate('ProfileScreen');
             })
         }
         catch(error){
-            console.log(error.toString())
+            alert("Login Error, Please enter a valid Email and Password")
         }
     }
     

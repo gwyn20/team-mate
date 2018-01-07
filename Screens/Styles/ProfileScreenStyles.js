@@ -48,4 +48,28 @@ export default StyleSheet.create({
     margin: 10,
     padding: 10,
   },
+  eventName: {
+    alignItems: 'center',
+    justifyContent:'center',
+    paddingBottom: 20,
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: '#404956',
+  },
+  eventImage: {
+    width: 200,
+    height: 200,
+  },
+  title: {
+    flex:1,
+    marginTop: 10,
+    paddingLeft: 10,
+    height: 30,
+    alignItems: 'center',
+    justifyContent:'center',
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#ffffff',
+    backgroundColor: '#404956'
+  }
 })

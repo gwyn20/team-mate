@@ -4,8 +4,12 @@ import { Button } from '../Components/Button';
 import { TabNavigator } from 'react-navigation'
 import SettingsScreenContent from './SettingsScreen'
 import PlayScreenContent from './PlayScreen'
+const PlayScreenView = ({ navigation }) => (<PlayScreenContent navigation={navigation}/>)
 // Styles
 import styles from '../Screens/Styles/ProfileScreenStyles'
+
+// Firebase
+import firebaseApp from '../Modules/firebase';
 
 
 class ProfileScreen extends Component {
@@ -142,7 +146,7 @@ class PlayScreen extends Component {
         
         render () {
         return (
-            <PlayScreenContent/>
+            PlayScreenView(ProfileScreenTabNavigator)
         )
     }
 }
