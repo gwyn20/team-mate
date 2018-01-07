@@ -12,8 +12,7 @@ import styles from '../Screens/Styles/LoginScreenStyles'
 // Firebase
 import firebaseApp from '../Modules/firebase';
 
-// Navigation
-import AppStackNavigator from '../Navigation/AppStackNavigator';
+
 
 
 export default class LoginScreen extends Component {
