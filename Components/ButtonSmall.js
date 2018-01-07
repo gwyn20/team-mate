@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
-const Button = ({ onPress, children }) => {
+const ButtonSmall = ({ onPress, children }) => {
     return (
         <TouchableOpacity onPress={onPress} style={styles.button}>
             <Text style={styles.text}>{ children }</Text>
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     button: {
         marginTop: 10,
         padding: 10,
-        width: '100%',
+        width: '50%',
         backgroundColor: '#404956',
         borderRadius: 5,
         alignItems: 'center',
@@ -25,4 +25,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export { Button };
+export { ButtonSmall };

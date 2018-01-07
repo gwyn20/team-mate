@@ -6,7 +6,8 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    background: '#c9cfd8'
+    backgroundColor: '#c9cfd8',
+    justifyContent:'center'
   },
   logo: {
     marginTop: 10,
