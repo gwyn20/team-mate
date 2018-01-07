@@ -14,7 +14,7 @@ import styles from '../Screens/Styles/LoginScreenStyles'
 import firebaseApp from '../Modules/firebase';
 
 
-class LoginScreen extends Component {
+export default class LoginScreen extends Component {
 
     constructor(props) {
         super(props)
@@ -211,20 +211,20 @@ class LoginScreen extends Component {
 
 
 
-const LoginScreenStackNavigator = StackNavigator({
+//const LoginScreenStackNavigator = StackNavigator({
     
-    LoginScreen: { screen: LoginScreen },
-    ProfileScreen: { screen: ProfileScreen },
-}, {
+    //LoginScreen: { screen: LoginScreen },
+    //ProfileScreen: { screen: ProfileScreen },
+//}, {
     
-    navigationOptions: {
-        headerTitle: (
-            <Image source={require('../Images/top_logo.png')} style={{ width: 40, height: 40 }}/>
-        ),
-        style: { 
-            backgroundColor: '#404956' 
-        },
-      }
-})
+    //navigationOptions: {
+        //headerTitle: (
+            //<Image source={require('../Images/top_logo.png')} style={{ width: 40, height: 40 }}/>
+        //),
+        //style: { 
+            //backgroundColor: '#404956' 
+        //},
+      //}
+//})
 
-export default LoginScreenStackNavigator;
+//export default LoginScreenStackNavigator;
