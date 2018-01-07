@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, KeyboardAvoidingView, View, Text, Image} from 'react-native';
+import { ScrollView, KeyboardAvoidingView, View, Text, Image, } from 'react-native';
 import { Button } from '../Components/Button';
 import { StackNavigator } from 'react-navigation';
 import ProfileScreen from './ProfileScreen'
@@ -10,6 +10,7 @@ import styles from '../Screens/Styles/LoginScreenStyles'
 
 class LoginScreen extends Component {
     render () {
+        const { navigate } = this.props.navigation;
         return (
             <ScrollView style={styles.container}>
                 <KeyboardAvoidingView behavior='position'>
@@ -23,7 +24,7 @@ class LoginScreen extends Component {
                     <View style={styles.centered}>  
                         <Button
                             onPress={() => {
-                                this.props.navigation.navigate('ProfileScreen');
+                                navigate('ProfileScreen');
                             }}
                             accessibilityLabel="Log In To Team Mate"
                         >
@@ -36,10 +37,22 @@ class LoginScreen extends Component {
     }
 }
 
+
+
 const LoginScreenStackNavigator = StackNavigator({
     
     LoginScreen: { screen: LoginScreen },
     ProfileScreen: { screen: ProfileScreen },
+}, {
+    
+    navigationOptions: {
+        headerTitle: (
+            <Image source={require('../Images/top_logo.png')} style={{ width: 40, height: 40 }}/>
+        ),
+        style: { 
+            backgroundColor: '#404956' 
+        },
+      }
 })
 
 export default LoginScreenStackNavigator;

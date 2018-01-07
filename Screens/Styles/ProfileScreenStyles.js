@@ -16,14 +16,36 @@ export default StyleSheet.create({
     alignItems: 'center',
     padding: 10
   },
-  g20logo: {
-    flex:1,
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'center'
+  profileImage: {
+    width: 80,
+    height: 80,
+  },
+  userName: {
+    justifyContent:'center',
+    paddingBottom: 20,
+    fontSize: 30,
+    fontWeight: '700',
+    color: '#404956',
+  },
+  userInfo: {
+    paddingLeft: 5,
+    paddingBottom: 10,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#404956',
   },
   icon: {
     width: 26,
     height: 26,
+  },
+  eventIcon: {
+    flexGrow: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    flexDirection: 'row'
+  },
+  section: {
+    margin: 10,
+    padding: 10,
   },
 })

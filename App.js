@@ -7,7 +7,7 @@ import { DrawerNavigator } from 'react-navigation'
 // Available Pages
 import LoginScreen from './Screens/LoginScreen'
 import ProfileScreen from './Screens/ProfileScreen'
-import EventTypesScreen from './Screens/EventTypesScreen'
+import PlayScreen from './Screens/PlayScreen'
 import SettingsScreen from './Screens/SettingsScreen'
 
 export default class App extends React.Component {
@@ -22,16 +22,16 @@ export default class App extends React.Component {
 //const AppStackNavigator = StackNavigator({
   //LoginScreen: { screen: LoginScreen },
   //ProfileScreen: { screen: ProfileScreen },
-  //EventTypesScreen: { screen: EventTypesScreen },
+  //PlayScreen: { screen: PlayScreen },
   //SettingsScreen: { screen: SettingsScreen },
 //})
 
 
 const AppDrawerNavigator = DrawerNavigator({
-  LoginScreen: { screen: LoginScreen },
-  ProfileScreen: { screen: ProfileScreen },
-  EventTypesScreen: { screen: EventTypesScreen },
-  SettingsScreen: { screen: SettingsScreen },
+  Login: { screen: LoginScreen },
+  Profile: { screen: ProfileScreen },
+  Play: { screen: PlayScreen },
+  Settings: { screen: SettingsScreen },
 })
 
 const styles = StyleSheet.create({
