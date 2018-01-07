@@ -4,7 +4,6 @@ import { Container, Content, Header, Form, Input, Item, Label } from 'native-bas
 import { Button } from '../Components/Button';
 import { ButtonSmall } from '../Components/ButtonSmall';
 import { Alert } from 'react-native';
-import { StackNavigator } from 'react-navigation';
 import ProfileScreen from './ProfileScreen'
 
 // Styles
@@ -13,8 +12,11 @@ import styles from '../Screens/Styles/LoginScreenStyles'
 // Firebase
 import firebaseApp from '../Modules/firebase';
 
+// Navigation
+import AppStackNavigator from '../Navigation/AppStackNavigator';
 
-class LoginScreen extends Component {
+
+export default class LoginScreen extends Component {
 
     constructor(props) {
         super(props)
@@ -194,23 +196,3 @@ class LoginScreen extends Component {
         )
     }
 }
-
-
-
-const LoginScreenStackNavigator = StackNavigator({
-    
-    LoginScreen: { screen: LoginScreen },
-    ProfileScreen: { screen: ProfileScreen },
-}, {
-    
-    navigationOptions: {
-        headerTitle: (
-            <Image source={require('../Images/top_logo.png')} style={{ width: 40, height: 40 }}/>
-        ),
-        style: { 
-            backgroundColor: '#404956' 
-        },
-      }
-})
-
-export default LoginScreenStackNavigator;
